@@ -1,0 +1,132 @@
+/* FOR DESCTOP from 769px to 886 has an issue with aside block, don't understand why.... */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+body{
+    font-size: 12px;
+    font-family: 'Quicksand', sans-serif;
+    box-sizing: border-box;
+    margin: 8px;
+}
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, nav, 
+aside, article,
+ footer{ /*control margin between blocks*/
+    margin-bottom: 10px;
+}
+
+/* HEADING STYLE */
+header{
+    background-color: rgb(230, 230, 230);
+    padding: 10px 5px;
+}
+header h1{
+    font-size: 3em;
+}
+
+/* NAVIGATION STYLE */
+ul{
+    list-style-type: none;
+
+}
+ul li{
+    border-bottom: 1px solid rgb(218, 218, 218);
+}
+li a{
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    color: black;
+}
+li:hover a{
+    font-size: 1.2em;
+}
+
+/* ARTICLE STYLES */
+article h2{
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+article p{
+    margin-bottom: 5px;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+
+/* ASIDE STYLES */
+aside{
+    background-color: lightblue;
+    padding: 5px;
+}
+/* list styles*/
+dl dt{
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+/* FOOTER STYLES */
+footer{
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(230, 230, 230);
+}
+
+@media screen and (min-width: 600px){
+    /* NAVIGATION STYLES */
+    nav{
+       display: inline-block;
+       width: 20%;
+       margin-right: 2%; 
+    }
+    ul li{
+        margin: 5px 0;
+    }
+    /* MAIN STYLES */
+    main{
+        display: inline-block;
+        width: 77.5%;
+        padding-top: 10px;
+    }
+
+    nav, main, aside{
+        vertical-align: top;
+    }
+}
+
+@media screen and (min-width: 769px){
+   /* NAVIGATION STYLES */
+   body{
+       font-size: 16px;
+    }
+    nav{
+        width: 20%;
+        margin-right: 2%;
+        margin-bottom: 0;
+    }
+    ul li{
+        margin: 20px 0;
+    }
+     /* MAIN STYLES */
+    main{
+        width: 55%;
+        padding-top: 10px;
+    }
+     /* ASIDE STYLES */
+    aside{
+        display: inline-block;
+        width: 20%;
+        padding: 20px 5px;
+        margin-left: 2%;
+    }
+    dl dt{
+        font-size: 1.2em;
+        margin: 15px 0;
+    }
+
+}
